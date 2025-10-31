@@ -1,0 +1,23 @@
+﻿Relatório 
+Flávio
+* Implementou a classe Jogo.java (lógica principal do jogo: menus, escolhas e batalhas).
+
+* Criou parte do Main.java (inicialização e chamada do método principal).
+
+* Implementou Inimigo.java e Item.java (atributos e comportamento dos inimigos e itens).
+
+* Testou o código e corrigiu erros de compilação e fluxo.
+
+Avaliação pessoal: Consegui aplicar os conceitos de POO e também construir uma boa narrativa além de contribuir ativamente no projeto . Uma boa nota seria 8/10.
+
+Narayan
+   * Desenvolveu as classes de personagens (Guerreiro, Mago, Arqueiro) herdando de Personagem.
+
+   * Trabalhou na interface e narrativa (textos do prólogo, mensagens e interação com o usuário).
+
+   * Ajudou na criação do Inventario.java e sistema de coleta/uso de itens.
+
+   * Fez ajustes de balanceamento e construção da narrativa
+
+Avaliação pessoal:Consegui aplicar os conceitos de POO e também construir uma boa narrativa além de contribuir ativamente no projeto . Minha nota justa seria 8/10.
+.
