@@ -5,14 +5,20 @@ public class Jogo {
     private Personagem jogador;
 
     public void iniciar() {
-        System.out.println("🌅 Bem-vindo a ELDION - Sombras de Eldrion 🌌");
-        System.out.print("Digite o nome do seu herói: ");
+        System.out.println("Fragmentos da Alma Perdida");
+        System.out.println("Você desperta em um lugar que não conhece");
+        System.out.println("Não há chão. Não há ar. Apenas o silêncio...");
+        System.out.println("Uma voz sussurra dentro da sua mente");
+        System.out.println("Herói? Não... alma perdida. Mas talvez... ainda tenha um propósito.");
+
+        System.out.print("\nDiga-me, qual o nome que ecoa em meio ao esquecimento?");
         String nome = sc.nextLine();
 
-        System.out.println("Escolha sua classe:");
-        System.out.println("1. Guerreiro");
-        System.out.println("2. Mago");
-        System.out.println("3. Arqueiro");
+        System.out.println("\n" + nome + " sim. Esse nome ainda carrega um peso.");
+        System.out.println("Escolha a forma que seu tormento assumirá:");
+        System.out.println("1. Guerreiro — aquele que luta para esquecer.");
+        System.out.println("2. Mago — aquele que busca entender a dor");
+        System.out.println("3. Arqueiro — aquele que observa o mundo de longe, temendo senti-lo novamente.");
         int escolha = lerInt(1,3);
 
         switch (escolha) {
@@ -22,10 +28,15 @@ public class Jogo {
             default: jogador = new Guerreiro(nome);
         }
 
-        System.out.println("\n--- PRÓLOGO ---");
-        System.out.println("Há muito tempo, o Reino de Eldrion caiu nas sombras...");
-        System.out.println("Agora, apenas um herói pode reunir os Fragmentos de Solaris e restaurar a luz.");
 
+        System.out.println("\n--- PRÓLOGO ---");
+        System.out.println("Não há reinos aqui. Apenas ruínas do que um dia ousou existir.");
+        System.out.println("Você sente... ecos. Lembranças despedaçadas de um mundo que se apagou junto com você.");
+        System.out.println("Os deuses partiram. O tempo quebrou. E o silêncio tornou-se lei.");
+        System.out.println("Ainda assim... algo te chama.");
+        System.out.println("Uma força esquecida murmura sobre os Fragmentos da Alma — estilhaços do seu próprio ser,");
+        System.out.println("espalhados entre sonhos, memórias e horrores que caminham sem nome.");
+        System.out.println("Recupere-os... ou permaneça aqui, aprisionado no vazio, até que o nada te consuma por completo.");
         // item inicial
         jogador.getInventario().adicionarItem(new Item("Poção de Cura", "Restaura vida", "cura", 2));
 
@@ -68,7 +79,7 @@ public class Jogo {
             System.out.println("Das sombras surge um Lobo da Névoa!");
             batalhar(new Inimigo("Lobo da Névoa", 70, 12, 6, 1));
         } else {
-            System.out.println("Um antigo guardião desperta nas Ruínas de Varyon...");
+            System.out.println("Um antigo guardião desperta nas Ruínas");
             batalhar(new Inimigo("Guardião de Pedra", 90, 14, 8, 2));
         }
     }
