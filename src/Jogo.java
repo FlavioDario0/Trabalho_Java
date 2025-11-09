@@ -119,7 +119,6 @@ public class Jogo {
             System.out.println("🏆 " + jogador.getNome() + " venceu o combate!");
 
 
-
             if (dado.nextDouble() < 0.35) {
                 System.out.println(inimigo.getNome() + " deixou cair uma Poção de Cura!");
                 jogador.getInventario().adicionarItem(new Item("Poção de Cura", "Restaura vida", "cura", 1));
