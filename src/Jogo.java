@@ -117,8 +117,16 @@ public class Jogo {
 
         if (jogador.estaVivo()) {
             System.out.println("🏆 " + jogador.getNome() + " venceu o combate!");
-            // recompensa simples
-            jogador.getInventario().adicionarItem(new Item("Poção de Cura", "Restaura vida", "cura", 1));
+
+
+
+            if (dado.nextDouble() < 0.35) {
+                System.out.println(inimigo.getNome() + " deixou cair uma Poção de Cura!");
+                jogador.getInventario().adicionarItem(new Item("Poção de Cura", "Restaura vida", "cura", 1));
+            } else {
+                System.out.println(inimigo.getNome() + " não deixou nada para trás.");
+            }
+
         } else {
             System.out.println("☠️ " + jogador.getNome() + " foi derrotado...");
         }

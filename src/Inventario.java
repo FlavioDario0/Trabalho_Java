@@ -11,13 +11,32 @@ public class Inventario {
         }
     }
 
+    // Em Inventario.java - MÉTODO CORRIGIDO
     public void adicionarItem(Item novo) {
-        for (Item i : itens) {
-            if (i.equals(novo)) {
-                i = new Item(i.getNome(), "", "", i.getQuantidade() + novo.getQuantidade());
-                return;
+        // Usamos um loop por índice (int i) para poder modificar a lista
+        for (int i = 0; i < itens.size(); i++) {
+            Item itemExistente = itens.get(i);
+
+            // Se encontramos um item com o mesmo nome
+            if (itemExistente.equals(novo)) {
+
+                // Criamos um novo objeto Item com a quantidade somada
+                // (Usando a mesma lógica que você tinha, de "" para desc/efeito)
+                Item itemAtualizado = new Item(
+                        itemExistente.getNome(),
+                        "",
+                        "",
+                        itemExistente.getQuantidade() + novo.getQuantidade()
+                );
+
+                // CORREÇÃO: Usamos 'itens.set()' para substituir o item antigo
+                // na posição 'i' pelo item atualizado.
+                itens.set(i, itemAtualizado);
+                return; // Item foi empilhado, podemos sair.
             }
         }
+
+        // Se o loop terminou sem achar o item, adicionamos ele como novo na lista.
         itens.add(novo);
     }
 
